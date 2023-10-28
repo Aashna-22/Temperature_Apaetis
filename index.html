@@ -12,7 +12,6 @@
     <script src="https://kit.fontawesome.com/484c1d182d.js" crossorigin="anonymous"></script>
     <style>
         @media screen and (max-width: 400px) {
-
         .col {
             width: 100%; 
         }
@@ -45,6 +44,13 @@
             background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 236, 210, 1));
             background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 236, 210, 1))
         }
+        .card-text{
+            white-space: nowrap;
+        }
+        #jumbotron{
+            display: flex;
+            flex-direction: row;
+        }
     </style>
 </head>
 
@@ -56,7 +62,7 @@
     </nav>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-6 bg-light p-2">
+            <div class="col-6 p-2">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Enter City Name" aria-describedby="button-addon2" id="city">
                     <div class="input-group-append">
@@ -90,59 +96,55 @@
             </div>
         </div>
     </div>
-    <div class="mt-2 p-0 pt-3 pb-3 jumbotron jumbotron-fluid" style="background-color: #C1CFEA;">
-        <div class="container">
-            <h1 class="display-5">5-Day Forecast</h1>
-            <div class="row">
-                <div class="col">
-                    <div class="card text-white bg-primary mb-5" style="max-width: 20rem;">
-                        <div class="card-body">
-                            <p class="card-text" id=date1>Date</p>
-                            <p class="card-text"id=temp1>Temperature</p>
-                            <p class="card-text" id="temp_min1">Min Temp</p>
-                            <p class="card-text" id="temp_max1">Max Temp</p>
-                        </div>
-                    </div>
+    <h1 class="mt-2 p-0 pt-3 pb-3 ml-2 display-5">5-Day Forecast</h1>
+    <div class="ml-2 zrow" id="jumbotron">
+        <div class="col">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <p class="card-text" id=date1>Date</p>
+                    <p class="card-text"id=temp1>Temperature</p>
+                    <p class="card-text" id="temp_min1">Min Temp</p>
+                    <p class="card-text" id="temp_max1">Max Temp</p>
                 </div>
-                <div class="col">
-                    <div class="card text-white bg-primary mb-5" style="max-width: 20rem;">
-                        <div class="card-body">
-                            <p class="card-text" id=date2>Date</p>
-                            <p class="card-text"id=temp2>Temperature</p>
-                            <p class="card-text" id="temp_min2">Min Temp</p>
-                            <p class="card-text" id="temp_max2">Max Temp</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <p class="card-text" id=date2>Date</p>
+                    <p class="card-text"id=temp2>Temperature</p>
+                    <p class="card-text" id="temp_min2">Min Temp</p>
+                    <p class="card-text" id="temp_max2">Max Temp</p>
                 </div>
-                <div class="col">
-                    <div class="card text-white bg-primary mb-5" style="max-width: 20rem;">
-                        <div class="card-body">
-                            <p class="card-text" id=date3>Date</p>
-                            <p class="card-text" id=temp3>Temperature</p>
-                            <p class="card-text" id="temp_min3">Min Temp</p>
-                            <p class="card-text" id="temp_max3">Max Temp</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <p class="card-text" id=date3>Date</p>
+                    <p class="card-text" id=temp3>Temperature</p>
+                    <p class="card-text" id="temp_min3">Min Temp</p>
+                    <p class="card-text" id="temp_max3">Max Temp</p>
                 </div>
-                <div class="col">
-                    <div class="card text-white bg-primary mb-5" style="max-width: 20rem;">
-                        <div class="card-body">
-                            <p class="card-text" id=date4>Date</p>
-                            <p class="card-text" id=temp4>Temperature</p>
-                            <p class="card-text" id="temp_min4">Min Temp</p>
-                            <p class="card-text" id="temp_max4">Max Temp</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <p class="card-text" id=date4>Date</p>
+                    <p class="card-text" id=temp4>Temperature</p>
+                    <p class="card-text" id="temp_min4">Min Temp</p>
+                    <p class="card-text" id="temp_max4">Max Temp</p>
                 </div>
-                <div class="col">
-                    <div class="card text-white bg-primary mb-5" style="max-width: 20rem;">
-                        <div class="card-body">
-                            <p class="card-text" id=date5>Date</p>
-                            <p class="card-text" id=temp5>Temperature</p>
-                            <p class="card-text" id="temp_min5">Min Temp</p>
-                            <p class="card-text" id="temp_max5">Max Temp</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <p class="card-text" id=date5>Date</p>
+                    <p class="card-text" id=temp5>Temperature</p>
+                    <p class="card-text" id="temp_min5">Min Temp</p>
+                    <p class="card-text" id="temp_max5">Max Temp</p>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ The following assignment is made using html, bootstrap, js for front-end
 and php is used for api integration with the application.
 
 Free Open Source Api used for collecting weather details: api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}.
+The above json file has forecast information upto 6 days.
 
 Steps to run the code:
 1) Clone the files in your local machine.

@@ -4,7 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const location = document.getElementById("city").value;
 
         fetch("weather.php?location=" + location)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             const citySearched = document.getElementById('citySearched');
             citySearched.innerHTML = data.city;
@@ -29,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 max_temp.innerHTML = `<i class="fas fa-temperature-high"></i>Maximum: ${data.weatherData[i].temp_max}°C`;
             }
         })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     });
     
 });
